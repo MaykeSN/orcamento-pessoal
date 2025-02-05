@@ -18,4 +18,10 @@ function registerExpense(){
     let valor = document.getElementById("valor").value;
 
     const expense = new Expense(ano, mes, dia, tipo, descricao, valor);
+    save(expense);
+    
+}
+
+function save(expense){
+    localStorage.setItem('expense', JSON.stringify(expense))
 }
